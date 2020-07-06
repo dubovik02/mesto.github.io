@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name">Jaques Causteau</h1>
+          <p class="user-info__job">Sailor, Researcher</p>
+          <button class="button user-info__button-edit">Edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+
+      <!-- Пример вёрстки карточки: -->
+
+      <!-- <div class="place-card">
+        <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
+          <button class="place-card__delete-icon"></button>
+        </div>
+        <div class="place-card__description">
+          <h3 class="place-card__name">Камчатка</h3>
+          <div class="place-card__like-container">
+            <button class="place-card__like-icon"></button>
+            <p class="place-card__like-counter"></p>
+          <div>
+        </div>
+      </div> -->
+
+      <!-- конец примера. -->
+
+    </div>
+    <!-- добавление места -->
+    <div class="popup">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close popup-add__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new">
+            <input type="text" required minlength="2" name="name" class="popup__input popup__input_type_name" placeholder="Название">
+            <p class="popup__error-label popup__error-label-name">Это обязательное поле</p>
+            <input type="url" required name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку">
+            <p class="popup__error-label popup__error-label-link">Здесь должна быть ссылка</p>
+            <button type="button" class="button popup__button">+</button>
+        </form>
+      </div>
+    </div>
+    <!-- редактирование данных автора -->
+    <div class="popup popup-edit">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close popup-edit__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form popup-edit__form" name="edit">
+            <input type="text" required minlength="2" name="name" class="popup__input popup__input_type_name popup-edit__input_type_name" placeholder="Имя">
+            <p class="popup__error-label popup__error-label-authorname">Это обязательное поле</p>
+            <input type="text" required minlength="2" name="description" class="popup__input popup-edit__input_type_description" placeholder="О себе">
+            <p class="popup__error-label popup__error-label-authordescription">Это обязательное поле</p>
+            <button type="button" class="button popup__button popup-edit__button-save">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <!-- редактирование аватара -->
+    <div class="popup popup-avatar-edit">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close popup-avatar-edit__close">
+        <h3 class="popup__title">Редактировать аватар</h3>
+        <form class="popup__form popup-avatar-edit__form" name="avataredit">
+          <input type="url" required name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на аватар">
+          <p class="popup__error-label popup__error-label-link">Здесь должна быть ссылка</p>
+          <button type="button" class="button popup__button popup-edit__button-save popup-edit__button-save-avatar">Обновить</button>
+        </form>
+      </div>
+    </div>
+    <!-- просмотр картинки -->
+    <div class="popup popup-image">
+      <div class="popup-image__content"> 
+        <img src="./images/close.svg" alt="" class="popup__close popup-image__close">
+        <!-- сюда вставляем картинку -->
+      </div>
+    </div> 
+
+  </div>
+  <script src="./js/popoups/BasePopup.js"></script>
+  <script src="./js/popoups/BasePopupEdit.js"></script>
+  <script src="./js/popoups/PopupAddPlace.js"></script>
+  <script src="./js/popoups/PopupEditAuthor.js"></script>
+  <script src="./js/popoups/PopupEditAvatar.js"></script>
+  <script src="./js/popoups/PopupImage.js"></script>
+  <script src="./js/backend/Api.js"></script>
+  <script src="./js/cards/Card.js"></script>
+  <script src="./js/cards/CardsList.js"></script>
+  <script src="./js/entities/UserInfo.js"></script>
+  <script src="./js/validators/FormInputsValidator.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
