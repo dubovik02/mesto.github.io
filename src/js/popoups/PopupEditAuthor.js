@@ -2,7 +2,9 @@
  * Класс попапа редактирования данных автора
  */
 
-class PopupEditAuthor extends BaseEditPopup {
+import BaseEditPopup from './BasePopupEdit';
+
+export default class PopupEditAuthor extends BaseEditPopup {
 
     _userInfo = null;
 

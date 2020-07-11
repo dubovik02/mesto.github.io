@@ -1,7 +1,9 @@
 /**
  * Базовый класс попапа редактирования сущностей
  */
-class BaseEditPopup extends BasePopup {
+import BasePopup from './BasePopup';
+
+export default class BaseEditPopup extends BasePopup {
 
     _form = null;
     _submitFunction = null;

@@ -2,7 +2,7 @@
 /**
  * Класс автора
  */
-class UserInfo {
+export default class UserInfo {
 
   _name = null;
   _description = null;

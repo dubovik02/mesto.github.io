@@ -2,12 +2,12 @@
  * Класс настроек взаимодействия с бэкенд частью
  */
 
-class Api {
+export default class Api {
   // Можно лучше
   // Так как переменные будут в конструкторе инициализированы, то их вообще отсюда можно убрать.
-  _serverHttp;
-  _cohortCode;
-  _userToken;
+  // _serverHttp;
+  // _cohortCode;
+  // _userToken;
 
   constructor(serverHttp, cohortCode, userToken) {
     this._serverHttp = serverHttp;

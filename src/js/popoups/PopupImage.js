@@ -2,7 +2,9 @@
  * Класс попапа просмотра изображения
  */
 
-class PopupImage extends BasePopup {
+import BasePopup from './BasePopup';
+
+export default class PopupImage extends BasePopup {
 
     _imageLink = null;
     _imgContainer = null;

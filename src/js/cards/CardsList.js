@@ -1,14 +1,13 @@
 /**
  * Набор карточек
  */
-class CardsList {
+export default class CardsList {
 
     _containerElement = null;
 
     /**
      * Конструктор
      * @param {Element} containerElement DOM-контейнер для карточек
-     * @param {Element} cardDOMArr массив DOM-элементов карточек
      */
     constructor(containerElement) {
         this._containerElement = containerElement;

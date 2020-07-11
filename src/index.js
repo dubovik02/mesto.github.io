@@ -1,3 +1,14 @@
+import "./style.css";
+import Api from './js/backend/Api';
+import CardsList from './js/cards/CardsList';
+import Card from './js/cards/Card';
+import UserInfo from './js/entities/UserInfo';
+import FormInputsValidator from './js/validators/FormInputsValidator';
+import PopupAddPlace from './js/popoups/PopupAddPlace';
+import PopupEditAuthor from './js/popoups/PopupEditAuthor';
+import PopupEditAvatar from './js/popoups/PopupEditAvatar';
+import PopupImage from './js/popoups/PopupImage';
+
 /* --------------------Переменные-------------*/
 const api = new Api('https://praktikum.tk', 'cohort11', 'cb11cba6-5a41-43f3-af6f-8fd4083a7282');
 

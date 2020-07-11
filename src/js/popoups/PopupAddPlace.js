@@ -1,8 +1,9 @@
 /**
  * Класс попапа добавления места
  */
+import BaseEditPopup from './BasePopupEdit';
 
-class PopupAddPlace extends BaseEditPopup {
+export default class PopupAddPlace extends BaseEditPopup {
 
     constructor(popupDOMElement, buttonOpen, buttonClose, buttonSubmit) {
         super(popupDOMElement, buttonOpen, buttonClose, buttonSubmit);
