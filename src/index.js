@@ -10,7 +10,9 @@ import PopupEditAvatar from './js/popoups/PopupEditAvatar';
 import PopupImage from './js/popoups/PopupImage';
 
 /* --------------------Переменные-------------*/
-const api = new Api('https://praktikum.tk', 'cohort11', 'cb11cba6-5a41-43f3-af6f-8fd4083a7282');
+const serverHttp = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk';
+const api = new Api(serverHttp, 'cohort11', 'cb11cba6-5a41-43f3-af6f-8fd4083a7282');
+//const api = new Api('https://praktikum.tk', 'cohort11', 'cb11cba6-5a41-43f3-af6f-8fd4083a7282');
 
 /* ---------Место-----------*/
 const placesList = document.querySelector('.places-list');
@@ -275,35 +277,3 @@ function showImage(linkImage) {
  * Загрузка страницы
  */
 document.addEventListener('DOMContentLoaded', makeDOM);
-
-// Здравствуйте!
-
-// Оставил косметический комментарий в Api, попробуйте сделать согласно совету.
-
-// ## Итог
-
-// - класс Api реализован согласно поставленной задаче
-// - информация о пользователе  (имя, подпись и аватар) подгружаются с сервера (GET запрос)
-// - имя и о себе можно отредактировать (отправляется PATCH запрос, новые данные)
-// - карточки подгружаются с сервера (GET запрос)
-// - обязательный функционал работает без багов
-// - корректная работа с асинхронным кодом
-// - DOM изменяется только после того, как запрос успешно выполнен
-// - ошибки сервера обрабатываются
-
-// Работа принята
-
-
-// ## Можно лучше
-
-// Большое количество параметров лучше передвать в метод или в конструктор используя деструктуризацию.
-
-// Например в коде:
-// ~~~
-// const newClass = new Class({ windowOne, userForm, popupObj })
-// ~~~
-// А внутри класса:
-// ~~~
-// constructor ({ userForm, popupObj, windowOne }) {...}
-// ~~~
-// И тогда порядок переменных будет неважен, это удобно

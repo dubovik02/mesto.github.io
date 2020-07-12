@@ -73,5 +73,3 @@ export default class UserInfo {
   }
 
 }
-
-// Для таких классов удобно использовать геттеры: https://yadi.sk/i/RgGlodMrciyvSg

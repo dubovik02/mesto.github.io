@@ -2,8 +2,7 @@
  * Карточка места
  */
 export default class Card {
-  // Если для некоторых переменных осуществлять проверку типа а не знаяения, то эту часть кода можно немного сократить
-  // Можно лучше
+
   _name = null;
   _link = null;
   _likeCount = 0;
@@ -184,9 +183,7 @@ export default class Card {
    * Показывает изображение карточки
    */
   _showImage = () => {
-    // Лучше проверить даже не на null, а на typeof
-    // функция ли у нас тут или нет
-    // +++ Можно лучше
+
     if (this._showFunction instanceof Function) {
       this._showFunction.call(this, this.getLink());
     }
