@@ -2,7 +2,7 @@
  * Базовый класс попапа
  */
 
-class BasePopup {
+export default class BasePopup {
 
   _popupDOMElement = null;
   _buttonClose = null;

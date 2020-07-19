@@ -2,7 +2,9 @@
  * Класс попапа редактирования аватара
  */
 
-class PopupEditAvatar extends BaseEditPopup {
+import BaseEditPopup from './BasePopupEdit';
+
+export default class PopupEditAvatar extends BaseEditPopup {
 
 
     constructor(popupDOMElement, buttonOpen, buttonClose, buttonSubmit) {

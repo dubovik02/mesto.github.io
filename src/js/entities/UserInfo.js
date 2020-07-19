@@ -2,7 +2,7 @@
 /**
  * Класс автора
  */
-class UserInfo {
+export default class UserInfo {
 
   _name = null;
   _description = null;
@@ -73,5 +73,3 @@ class UserInfo {
   }
 
 }
-
-// Для таких классов удобно использовать геттеры: https://yadi.sk/i/RgGlodMrciyvSg

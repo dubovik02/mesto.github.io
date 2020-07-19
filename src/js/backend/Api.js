@@ -2,12 +2,7 @@
  * Класс настроек взаимодействия с бэкенд частью
  */
 
-class Api {
-  // Можно лучше
-  // Так как переменные будут в конструкторе инициализированы, то их вообще отсюда можно убрать.
-  _serverHttp;
-  _cohortCode;
-  _userToken;
+export default class Api {
 
   constructor(serverHttp, cohortCode, userToken) {
     this._serverHttp = serverHttp;
@@ -26,13 +21,6 @@ class Api {
           authorization: `${this._userToken}`
         }
       }));
-    // +++ Можно лучше
-    // Повторяющийся код разбора ответа сервера моржно вынести в отдельный метод класса
-    // и обращаться к нему
-
-    // Я предполагал несколько иную, но лучше читаемую конструкцию:
-    //  fetch()
-    //  .then(commonParsingMethod)
   }
 
   /**

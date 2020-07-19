@@ -1,7 +1,7 @@
 /**
  * Класс валидатора формы
  */
-class FormInputsValidator {
+export default class FormInputsValidator {
 
 
   _form = null;
